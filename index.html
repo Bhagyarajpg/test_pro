@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('background.jpg'); /* Replace 'background.jpg' with the path to your background image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        select {
+            padding: 12px;
+            width: 250px;
+            font-size: 16px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        #price {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Local Store</h2>
+
+    <label for="items">Select an item:</label>
+    <select id="items" onchange="calculatePrice()">
+        <option value="item1">Item 1</option>
+        <option value="item2">Item 2</option>
+        <option value="item3">Item 3</option>
+	<option value="item4">Item 4</option>
+        <!-- Add more items as needed -->
+    </select>
+
+    <label for="price">Price:</label>
+    <span id="price">0</span> USD
+
+    <script>
+        function calculatePrice() {
+            var selectedValue = document.getElementById("items").value;
+
+            var prices = {
+                "item1": 10.99,
+                "item2": 24.99,
+                "item3": 8.49,
+                "item4": 6.56
+                // Add more prices as needed
+            };
+
+            document.getElementById("price").textContent = prices[selectedValue].toFixed(2);
+        }
+    </script>
+
+</body>
+</html>
