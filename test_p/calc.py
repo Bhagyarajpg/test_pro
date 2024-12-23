@@ -8,7 +8,7 @@ app = FastAPI()
 class CalculationRequest(BaseModel):
     operation: str
     numbers: List[float]
-
+#testing calculator program
 @app.get("/")
 def read_root():
     return {"message": "Welcome to the AI Calculator API!"}
