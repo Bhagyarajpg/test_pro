@@ -14,6 +14,9 @@ def read_root():
     return {"message": "Welcome to the AI Calculator API!"}
 #sample calculator project created by bhagyaraj
 #changes added from local
+#https://github.com/Bhagyarajpg/test_pro/blob/main/test_p/calc.py
+
+#extra added lines for checko\ing new branch
 @app.post("/calculate/")
 def calculate(request: CalculationRequest):
     try:

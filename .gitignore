@@ -1,0 +1,11 @@
+# Ignore all .log files
+*.log
+
+# Ignore the node_modules directory
+node_modules/
+
+# Ignore environment files
+.venv
+venv/
+# Ignore all files in the /dist folder
+/dist/
