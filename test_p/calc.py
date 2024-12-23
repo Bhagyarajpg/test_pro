@@ -13,6 +13,7 @@ class CalculationRequest(BaseModel):
 def read_root():
     return {"message": "Welcome to the AI Calculator API!"}
 #sample calculator project created by bhagyaraj
+#changes added from local
 @app.post("/calculate/")
 def calculate(request: CalculationRequest):
     try:
